@@ -1,0 +1,13 @@
+{
+  "name": "skyeff/file-search-bundle",
+  "type": "symfony-bundle",
+  "description": "File search bundle",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Golovin",
+      "email": "skyeff@gmail.com"
+    }
+  ]
+}

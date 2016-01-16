@@ -1,0 +1,4 @@
+services:
+#    skyeff_file_search.example:
+#        class: Skyeff\FileSearchBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
