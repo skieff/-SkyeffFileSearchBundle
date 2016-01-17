@@ -9,5 +9,11 @@
       "name": "Sergey Golovin",
       "email": "skyeff@gmail.com"
     }
-  ]
+  ],
+  "require": {
+    "symfony/framework-bundle": "2.8.x-dev"
+  },
+  "autoload": {
+    "psr-4": {"Skyeff\\FileSearchBundle\\": ""}
+  }
 }
