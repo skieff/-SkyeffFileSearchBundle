@@ -1,0 +1,9 @@
+services:
+  skyeff_file_search.search_engine_registry:
+    class: Skyeff\FileSearchBundle\Util\SearchEngine\Registry
+    arguments:    ['fake']
+
+  skyeff_file_search.search_engine.fake:
+    class: Skyeff\FileSearchBundle\Tests\Util\SearchEngine\FakeEngine
+    tags:
+      - {name: skyeff_file_search.search_engine, alias: fake}
