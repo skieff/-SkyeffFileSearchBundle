@@ -1,4 +1,24 @@
+parameters:
+  skyeff_file_search.default_engine: basic
+  skyeff_file_search.lookup_dir_list:
+    - "."
+
+  skyeff_file_search.max_allowed_file_size: 1000000
+  skyeff_file_search.search_engine.grep.binary: "/bin/grep"
+
 services:
-#    skyeff_file_search.example:
-#        class: Skyeff\FileSearchBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+  skyeff_file_search.search_engine_registry:
+    class: Skyeff\FileSearchBundle\Util\SearchEngine\Registry
+    arguments:    ['%skyeff_file_search.default_engine%']
+
+  skyeff_file_search.search_engine.basic:
+    class: Skyeff\FileSearchBundle\Util\SearchEngine\Basic
+    arguments:    ['%skyeff_file_search.lookup_dir_list%', '%skyeff_file_search.max_allowed_file_size%']
+    tags:
+      - {name: skyeff_file_search.search_engine, alias: basic}
+
+  skyeff_file_search.search_engine.grep:
+    class: Skyeff\FileSearchBundle\Util\SearchEngine\Grep
+    arguments:    ['%skyeff_file_search.lookup_dir_list%', '%skyeff_file_search.search_engine.grep.binary%']
+    tags:
+      - {name: skyeff_file_search.search_engine, alias: grep}
