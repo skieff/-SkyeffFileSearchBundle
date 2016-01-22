@@ -19,7 +19,13 @@
 }
 ```
 
-3 Register bundle routes in `app\config\routing.yml`
+3 Update composer dependencies 
+
+```
+>php composer.phar update
+```
+
+4 Register bundle routes in `app\config\routing.yml`
 
 ```
 find_files:
