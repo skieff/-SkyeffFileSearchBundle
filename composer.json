@@ -4,6 +4,7 @@
   "description": "File search bundle",
   "minimum-stability": "dev",
   "license": "MIT",
+  "version": "0.1-dev",
   "authors": [
     {
       "name": "Sergey Golovin",
