@@ -1,17 +1,17 @@
 ##Installation
 
-1. Add new repository source to composer.json
+1 Add new repository source to composer.json
 
 ```
 "repositories": [
     {
         "type": "vcs",
-        "url": "git@bitbucket.org:skyeff/skyefffilesearchbundle.git"
+        "url": "git@github.com:skieff/-SkyeffFileSearchBundle.git"
     }
 ]
 ```
 
-2. Add package dependency
+2 Add package dependency
 
 ```
 "require": {
@@ -19,7 +19,7 @@
 }
 ```
 
-3. Register bundle routes in `app\config\routing.yml`
+3 Register bundle routes in `app\config\routing.yml`
 
 ```
 find_files:
